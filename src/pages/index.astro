@@ -2,11 +2,12 @@
 import Header from "../components/Header.astro";
 import Sidebar from "../components/Sidebar.astro";
 import AboutMe from "../components/AboutMe.astro";
-import Projects from "../components/Projects.astro";
 import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
+import ProjectList from '../components/ProjectList.astro';
+
 ---
 
 <html lang="en">
@@ -25,7 +26,7 @@ import HamburgerMenu from "../components/HamburgerMenu.astro";
       <Header />
       <main class="max-w-5xl mx-auto space-y-16 mr-[-2%]">
         <section id="about" class="section"><AboutMe /></section>
-        <section id="projects" class="section"><Projects /></section>
+        <section id="projects" class="section"><ProjectList /></section>
         <section id="skills" class="section"><Skills /></section>
         <section id="contact" class="section"><Contact /></section>
       </main>
