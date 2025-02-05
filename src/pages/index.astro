@@ -6,25 +6,29 @@ import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import HamburgerMenu from "../components/HamburgerMenu.astro";
-import ProjectList from '../components/ProjectList.astro';
-
+import ProjectList from "../components/ProjectList.astro";
 ---
 
 <html lang="en">
   <head>
     <title>Pedro Mula Montesinos - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/src/styles/global.css" rel="stylesheet">
+    <link href="/src/styles/global.css" rel="stylesheet" />
     <script defer src="/src/scripts/sidebar.js"></script>
     <script defer src="/src/scripts/HamburguerMenu.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
-  <body class="flex-1 ml-[25%] p-8 overflow-y-auto h-screen bg-black  bg-fixed bg-cover bg-center text-gray-300" >
+  <body
+    class="flex-1 ml-[25%] p-8 overflow-y-auto h-screen bg-black bg-fixed bg-cover bg-center text-gray-300"
+  >
     <Sidebar />
-    <div class="flex-1 ml-[20%] p-8 overflow-y-auto">
+    <div class=" ml-[15%] flex-1 lg:ml-[20%] p-8 overflow-y-auto">
       <HamburgerMenu />
       <Header />
-      <main class="max-w-5xl mx-auto space-y-16 mr-[-2%]">
+      <main class="max-w-full mx-auto space-y-16 ml-[-20%] sm:ml-[5%] lg:ml-[10%]">
         <section id="about" class="section"><AboutMe /></section>
         <section id="projects" class="section"><ProjectList /></section>
         <section id="skills" class="section"><Skills /></section>
