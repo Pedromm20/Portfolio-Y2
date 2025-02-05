@@ -1,12 +1,11 @@
 @import "tailwindcss";
-@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
-
 body {
   background-image: url('/background-black.jpg');
   overflow-y: auto;
   height: 100vh;
   margin: 0;
 }
+
 .main-content {
   scroll-behavior: smooth;
 }
