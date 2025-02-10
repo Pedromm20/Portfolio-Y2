@@ -1,31 +1,318 @@
-@import "tailwindcss";
-@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
+:root {
+  /* Colores del tema oscuro (predeterminado) */
+  --background-image: url('/background-black.jpg');
+  --text-color: #f0f0f0;
+  --sidebar-link-color: #a0a0a0;
+  --sidebar-link-active-color: #64ffda;
+  --header-bg: #111827;
+  --border-color: #374151;
+  --button-bg: #64ffda;
+  --button-text: #000;
+  --card-title: #fff;
+  --card-description: #bbb;
+  --sidebar-text: #f0f0f0;
+  --title: #fff;
+  --highlight: #64ffda;
+  --description: #bbb;
+  --sidebar-link: #a0a0a0;
+  --sidebar-link-hover: #64ffda;
+  --sidebar-link-active: #64ffda;
+  --button-text: #000;
+  --button-hover: #52e6c2;
+  --about-bg: #1f2937;
+  --about-text: #f0f0f0;
+  --title: #fff;
+  --paragraph: #bbb;
+  --header-bg: #1f2937;
+  --header-text: #f0f0f0;
+  --header-title: #ffffff;
+  --header-hover: #64ffda;
+  --title-color: #64ffda;
+  --card-border: #374151;
+  --card-content-bg: #111827;
+  --card-title: #ffffff;
+  --card-text: #a0a0a0;
+  --title-color: #64ffda;
+  --subtitle-color: #aaa;
+  --text-color: #a0a0a0;
+  --title-color: #64ffda;
+  --text-color: #a0a0a0;
+  --icon-color: #64ffda;
+  --link-color: #64ffda;
+  --hover-color: #2af598;
+  --label-color: #aaa;
+  --input-bg: #111827;
+  --input-text: #a0a0a0;
+  --focus-color: #64ffda;
+  --button-bg: #64ffda;
+  --button-text: #000000;
+  --hover-button: #2af598;
+  
+}
+
+[data-theme="light"] {
+  /* Colores del tema claro */
+  --background-image: url('/background-white.jpg');
+  --text-color: #333333;
+  --sidebar-link-color: #666666;
+  --sidebar-link-active-color: #1E90FF;
+  --header-bg: #f8f9fa;
+  --border-color: #ddd;
+  --button-bg: #1E90FF;
+  --button-text: #fff;
+  --card-title: #111;
+  --card-description: #555;
+  --sidebar-text: #333333;
+  --title: #111;
+  --highlight: #1E90FF;
+  --description: #555;
+  --sidebar-link: #666;
+  --sidebar-link-hover: #1E90FF;
+  --sidebar-link-active: #1E90FF;
+  --button-bg: #1E90FF;
+  --button-text: #fff;
+  --button-hover: #1C86EE;
+  --about-bg: #f8f9fa;
+  --about-text: #333333;
+  --title: #111;
+  --paragraph: #555;
+  --header-bg: #1f2937;
+  --header-text: #f0f0f0;
+  --header-title: #ffffff;
+  --header-hover: #64ffda;
+  --header-bg: #ffffff;
+  --header-text: #333333;
+  --header-title: #111;
+  --header-hover: #1E90FF;
+  --title-color: #1E90FF;
+  --card-border: #e0e0e0;
+  --card-content-bg: #f5f5f5;
+  --card-title: #111;
+  --card-text: #333;
+  --title-color: #1E90FF;
+  --subtitle-color: #444;
+  --text-color: #333;
+  --title-color: #1E90FF;
+  --text-color: #333;
+  --icon-color: #1E90FF;
+  --link-color: #007bff;
+  --hover-color: #0056b3;
+  --label-color: #444;
+  --input-bg: #f5f5f5;
+  --input-text: #333;
+  --focus-color: #1E90FF;
+  --button-bg: #1E90FF;
+  --button-text: #ffffff;
+  --hover-button: #007bff;
+}
+
+/* === Aplicar colores globales en Tailwind === */
 body {
-  background-image: url('/background-black.jpg');
-  overflow-y: auto;
-  height: 100vh;
-  margin: 0;
-}
-.main-content {
-  scroll-behavior: smooth;
+  background-image: var(--background-image);
+  color: var(--text-color);
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-section {
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+/* === Header === */
+header {
+  background-color: var(--header-bg);
+  color: var(--text-color);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* === Sidebar === */
 .sidebar-link {
-  transition: color 0.3s ease-in-out;
+  color: var(--sidebar-link-color);
 }
 
 .sidebar-link.active {
-  color: #64ffda;
-  font-weight: bold;
+  color: var(--sidebar-link-active-color);
+}
+
+/* === About Me, Projects, Skills, Contact === */
+#about,
+#projects,
+#skills,
+#contact {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* === Borders === */
+.border {
+  border-color: var(--border-color);
+}
+
+/* === Botones === */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+button:hover {
+  background-color: var(--sidebar-link-active-color);
+}
+
+
+/* Side bar*/
+
+.bg-sidebar-bg {
+  background-color: var(--sidebar-bg);
+}
+
+.text-sidebar-text {
+  color: var(--sidebar-text);
+}
+
+.text-title {
+  color: var(--title);
+}
+
+.text-highlight {
+  color: var(--highlight);
+}
+
+.text-description {
+  color: var(--description);
+}
+
+.sidebar-link {
+  color: var(--sidebar-link);
+  transition: color 0.3s ease-in-out;
+}
+
+.sidebar-link:hover {
+  color: var(--sidebar-link-hover);
+}
+
+.sidebar-link.active {
+  color: var(--sidebar-link-active);
+}
+
+.bg-button-bg {
+  background-color: var(--button-bg);
+}
+
+.text-button-text {
+  color: var(--button-text);
+}
+
+.hover\:bg-button-hover:hover {
+  background-color: var(--button-hover);
+}
+
+/*AboutMe*/
+.text-about-text {
+  color: var(--about-text);
+}
+
+.text-title {
+  color: var(--title);
+}
+
+.text-paragraph {
+  color: var(--paragraph);
+}
+
+/*Header*/
+.bg-header-bg {
+  background-color: var(--header-bg);
+}
+
+.text-header-text {
+  color: var(--header-text);
+}
+
+.text-header-title {
+  color: var(--header-title);
+}
+
+.hover\:text-header-hover:hover {
+  color: var(--header-hover);
+}
+
+/*ProjectList*/
+.text-title-color {
+  color: var(--title-color);
+}
+
+
+.border-card-border {
+  border-color: var(--card-border);
+}
+
+.bg-card-content-bg {
+  background-color: var(--card-content-bg);
+}
+
+.text-card-title {
+  color: var(--card-title);
+}
+
+.text-card-text {
+  color: var(--card-text);
+}
+
+/*Skills*/
+.text-title-color {
+  color: var(--title-color);
+}
+
+.text-subtitle-color {
+  color: var(--subtitle-color);
+}
+
+.text-text-color {
+  color: var(--text-color);
+}
+/*contact*/
+.text-title-color {
+  color: var(--title-color);
+}
+
+.text-text-color {
+  color: var(--text-color);
+}
+
+.text-icon-color {
+  color: var(--icon-color);
+}
+
+.text-link-color {
+  color: var(--link-color);
+}
+
+.hover\:text-hover-color:hover {
+  color: var(--hover-color);
+}
+
+.text-label-color {
+  color: var(--label-color);
+}
+
+.bg-input-bg {
+  background-color: var(--input-bg);
+}
+
+.text-input-text {
+  color: var(--input-text);
+}
+
+.focus\:ring-focus-color:focus {
+  outline-color: var(--focus-color);
+}
+
+.bg-button-bg {
+  background-color: var(--button-bg);
+}
+
+.text-button-text {
+  color: var(--button-text);
+}
+
+.hover\:bg-hover-button:hover {
+  background-color: var(--hover-button);
 }
