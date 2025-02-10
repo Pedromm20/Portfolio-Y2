@@ -6,25 +6,24 @@ import Skills from "../components/Skills.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import ProjectList from "../components/ProjectList.astro";
+import ToggleTheme from "../components/toggleTheme.astro";
 ---
-<html lang="en">
+<html lang="en" class="dark">
+  <html class="dark">
   <head>
     <title>Pedro Mula Montesinos - Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="/styles/global.css" rel="stylesheet" />
+    <link href="/src/styles/global.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script defer src="/scripts/sidebar.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <script defer src="/scripts/toggleTheme.js"></script>
+
   </head>
-  <body
-    class="flex-1 ml-[25%] p-8 overflow-y-auto h-screen bg-black bg-fixed bg-cover bg-center text-gray-300" 
-  >
+  <body class="flex  bg-fixed bg-cover bg-center text-gray-900 dark:text-gray-300">
     <Sidebar />
-    <div class=" ml-[15%] flex-1 lg:ml-[20%] p-8 overflow-y-auto">
+    <div class="flex-1 ml-[25%] p-8 overflow-y-auto">
       <Header />
-      <main class="max-w-full  mx-auto space-y-16 ml-[-20%] sm:ml-[5%] lg:ml-[10%]">
+      <main class="max-w-5xl mx-auto space-y-16">
         <section id="about" class="section"><AboutMe /></section>
         <section id="projects" class="section"><ProjectList /></section>
         <section id="skills" class="section"><Skills /></section>
@@ -32,5 +31,8 @@ import ProjectList from "../components/ProjectList.astro";
       </main>
       <Footer />
     </div>
+    
+    <ToggleTheme />
   </body>
 </html>
+

@@ -14,39 +14,37 @@ const projects = [
     image: "/projects/VehiculosApp.png",
     route: "https://vehiculosapplist.netlify.app",
   },
-    {
-        title: "Tour Of Heroes web",
-        description:
-        "The Tour of heroes Web is a simple web application that allows view a lot of details about heroes from Marvel.",
-        image: "/projects/tourofheroes.png",
-        route: "",
-    },
-
-  // Agregar más proyectos
+  {
+    title: "Tour Of Heroes web",
+    description:
+      "The Tour of heroes Web is a simple web application that allows view a lot of details about heroes from Marvel.",
+    image: "/projects/tourofheroes.png",
+    route: "",
+  },
 ];
 ---
 
-<section id="projects" class=" ml-[5%] lg:ml-[2%] py-16 px-2 w-full">
-  <h2 class="text-3xl font-bold text-green-400 mb-6">Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+<section id="projects" class="ml-[5%] lg:ml-[2%] py-16 px-2 w-full">
+  <h2 class="text-3xl font-bold text-title-color mb-6">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       projects.map((project) => (
         <a
           href={project.route}
-          class="block border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+          class="block border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-card-border hover:border-hover-border hover:scale-105 hover:-translate-y-2"
         >
           {project.image && (
             <img
               src={project.image}
               alt={project.title}
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
             />
           )}
-          <div class="p-4 bg-gray-800 h-full">
-            <h3 class="text-xl font-semibold mb-2 text-white">
+          <div class="p-4 bg-card-content-bg h-full">
+            <h3 class="text-xl font-semibold mb-2 text-card-title">
               {project.title}
             </h3>
-            <p class="text-gray-400">{project.description}</p>
+            <p class="text-card-text">{project.description}</p>
           </div>
         </a>
       ))
