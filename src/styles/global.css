@@ -3,7 +3,6 @@
 @import "tailwindcss/utilities";
 
 :root {
-  /* Colores del tema oscuro (predeterminado) */
   --background-image: url('/background-black.jpg');
   --text-color: #f0f0f0;
   --sidebar-link-color: #a0a0a0;
@@ -54,61 +53,6 @@
   
 }
 
-[data-theme="light"] {
-  /* Colores del tema claro */
-  --background-image: url('/background-white.jpg');
-  --text-color: #333333;
-  --sidebar-link-color: #666666;
-  --sidebar-link-active-color: #1E90FF;
-  --header-bg: #f8f9fa;
-  --border-color: #ddd;
-  --button-bg: #1E90FF;
-  --button-text: #fff;
-  --card-title: #111;
-  --card-description: #555;
-  --sidebar-text: #333333;
-  --title: #111;
-  --highlight: #1E90FF;
-  --description: #555;
-  --sidebar-link: #666;
-  --sidebar-link-hover: #1E90FF;
-  --sidebar-link-active: #1E90FF;
-  --button-bg: #1E90FF;
-  --button-text: #fff;
-  --button-hover: #1C86EE;
-  --about-bg: #f8f9fa;
-  --about-text: #333333;
-  --title: #111;
-  --paragraph: #555;
-  --header-bg: #1f2937;
-  --header-text: #f0f0f0;
-  --header-title: #ffffff;
-  --header-hover: #64ffda;
-  --header-bg: #ffffff;
-  --header-text: #333333;
-  --header-title: #111;
-  --header-hover: #1E90FF;
-  --title-color: #1E90FF;
-  --card-border: #e0e0e0;
-  --card-content-bg: #f5f5f5;
-  --card-title: #111;
-  --card-text: #333;
-  --title-color: #1E90FF;
-  --subtitle-color: #444;
-  --text-color: #333;
-  --title-color: #1E90FF;
-  --text-color: #333;
-  --icon-color: #1E90FF;
-  --link-color: #007bff;
-  --hover-color: #0056b3;
-  --label-color: #444;
-  --input-bg: #f5f5f5;
-  --input-text: #333;
-  --focus-color: #1E90FF;
-  --button-bg: #1E90FF;
-  --button-text: #ffffff;
-  --hover-button: #007bff;
-}
 
 /* === Aplicar colores globales en Tailwind === */
 body {
