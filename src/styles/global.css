@@ -54,7 +54,6 @@
 }
 
 
-/* === Aplicar colores globales en Tailwind === */
 body {
   background-image: var(--background-image);
   color: var(--text-color);
