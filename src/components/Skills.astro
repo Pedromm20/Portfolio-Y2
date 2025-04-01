@@ -1,124 +1,89 @@
 ---
-
+const skills = {
+  programmingLanguages: [
+    { name: 'HTML', icon: 'fab fa-html5', color: 'text-orange-500' },
+    { name: 'CSS', icon: 'fab fa-css3-alt', color: 'text-blue-500' },
+    { name: 'JavaScript', icon: 'fab fa-js', color: 'text-yellow-400' },
+    { name: 'PHP', icon: 'fab fa-php', color: 'text-indigo-500' },
+    { name: 'TypeScript', icon: 'fab fa-js', color: 'text-blue-500' },
+  ],
+  frameworks: [
+    { name: 'Angular', icon: 'fab fa-angular', color: 'text-red-500' },
+    { name: 'Laravel', icon: 'fab fa-laravel', color: 'text-red-600' },
+    { name: 'Astro', icon: '/astro-icon.jpg', color: '' },
+  ],
+  developmentTools: [
+    { name: 'SQL', icon: 'fas fa-database', color: 'text-gray-500' },
+    { name: 'Full Stack Development', icon: 'fas fa-laptop-code', color: 'text-white' },
+    { name: 'Git', icon: 'fab fa-git-alt', color: 'text-orange-600' },
+    { name: 'RESTful API', icon: 'fas fa-network-wired', color: 'text-blue-400' },
+    { name: 'PHPUnit Testing', icon: 'fas fa-check-circle', color: 'text-green-500' },
+    { name: 'Responsive Design', icon: 'fas fa-mobile-alt', color: 'text-cyan-400' },
+    { name: 'Scrum / Kanban', icon: 'fas fa-project-diagram', color: 'text-purple-400' },
+  ],
+  personalSkills: [
+    { name: 'Teamwork', icon: 'fas fa-users', color: 'text-blue-300' },
+    { name: 'Problem-solving', icon: 'fas fa-lightbulb', color: 'text-yellow-300' },
+    { name: 'Time management', icon: 'fas fa-clock', color: 'text-green-300' },
+    { name: 'Effective communication', icon: 'fas fa-comments', color: 'text-purple-300' },
+    { name: 'Continuous learning', icon: 'fas fa-brain', color: 'text-pink-400' },
+    { name: 'Adaptability', icon: 'fas fa-sync-alt', color: 'text-orange-300' },
+    { name: 'Critical thinking', icon: 'fas fa-search', color: 'text-red-300' },
+    { name: 'Empathy with users', icon: 'fas fa-heart', color: 'text-teal-400' },
+    { name: 'Stress management', icon: 'fas fa-balance-scale', color: 'text-gray-400' },
+  ],
+};
 ---
+
+
 <section id="skills" class="py-16 px-8">
   <h2 class="text-3xl font-bold text-title-color">Skills</h2>
 
   <!-- Programming Languages -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Programming Languages</h3>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-html5 text-orange-500 text-3xl"></i>
-      <span class="text-sm mt-2">HTML</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-css3-alt text-blue-500 text-3xl"></i>
-      <span class="text-sm mt-2">CSS</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-js text-yellow-400 text-3xl"></i>
-      <span class="text-sm mt-2">JavaScript</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-php text-indigo-500 text-3xl"></i>
-      <span class="text-sm mt-2">PHP</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-js text-blue-500 text-3xl"></i>
-      <span class="text-sm mt-2">TypeScript</span>
-    </div>
+    {skills.programmingLanguages.map(skill => (
+      <div class="flex flex-col items-center transition-transform transform hover:scale-110">
+        <i class={`${skill.icon} ${skill.color} text-3xl`}></i>
+        <span class="text-sm mt-2">{skill.name}</span>
+      </div>
+    ))}
   </div>
 
   <!-- Frameworks -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Frameworks</h3>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-angular text-red-500 text-3xl"></i>
-      <span class="text-sm mt-2">Angular</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-laravel text-red-600 text-3xl"></i>
-      <span class="text-sm mt-2">Laravel</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <img src="/astro-icon.jpg" class="h-10 rounded-xl" alt="Astro" />
-      <span class="text-sm mt-2">Astro</span>
-    </div>
+    {skills.frameworks.map(skill => (
+      <div class="flex flex-col items-center transition-transform transform hover:scale-110">
+        {skill.icon.includes('.jpg') ? (
+          <img src={skill.icon} class="h-10 rounded-xl" alt={skill.name} />
+        ) : (
+          <i class={`${skill.icon} ${skill.color} text-3xl`}></i>
+        )}
+        <span class="text-sm mt-2">{skill.name}</span>
+      </div>
+    ))}
   </div>
 
   <!-- Development Tools -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Development Tools</h3>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-database text-gray-500 text-3xl"></i>
-      <span class="text-sm mt-2">SQL</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-laptop-code text-white text-3xl"></i>
-      <span class="text-sm mt-2">Full Stack Development</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fab fa-git-alt text-orange-600 text-3xl"></i>
-      <span class="text-sm mt-2">Git</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-network-wired text-blue-400 text-3xl"></i>
-      <span class="text-sm mt-2">RESTful API</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-check-circle text-green-500 text-3xl"></i>
-      <span class="text-sm mt-2">PHPUnit Testing</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-mobile-alt text-cyan-400 text-3xl"></i>
-      <span class="text-sm mt-2">Responsive Design</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-project-diagram text-purple-400 text-3xl"></i>
-      <span class="text-sm mt-2">Scrum / Kanban</span>
-    </div>
+    {skills.developmentTools.map(skill => (
+      <div class="flex flex-col items-center transition-transform transform hover:scale-110">
+        <i class={`${skill.icon} ${skill.color} text-3xl`}></i>
+        <span class="text-sm mt-2">{skill.name}</span>
+      </div>
+    ))}
   </div>
 
   <!-- Personal Skills -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Personal Skills</h3>
   <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-users text-blue-300 text-3xl"></i>
-      <span class="text-sm mt-2">Teamwork</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-lightbulb text-yellow-300 text-3xl"></i>
-      <span class="text-sm mt-2">Problem-solving</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-clock text-green-300 text-3xl"></i>
-      <span class="text-sm mt-2">Time management</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-comments text-purple-300 text-3xl"></i>
-      <span class="text-sm mt-2">Effective communication</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-brain text-pink-400 text-3xl"></i>
-      <span class="text-sm mt-2">Continuous learning</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-sync-alt text-orange-300 text-3xl"></i>
-      <span class="text-sm mt-2">Adaptability</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-search text-red-300 text-3xl"></i>
-      <span class="text-sm mt-2">Critical thinking</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-heart text-teal-400 text-3xl"></i>
-      <span class="text-sm mt-2">Empathy with users</span>
-    </div>
-    <div class="flex flex-col items-center transition-transform transform hover:scale-110">
-      <i class="fas fa-balance-scale text-gray-400 text-3xl"></i>
-      <span class="text-sm mt-2">Stress management</span>
-    </div>
-
- 
-
- 
+    {skills.personalSkills.map(skill => (
+      <div class="flex flex-col items-center transition-transform transform hover:scale-110">
+        <i class={`${skill.icon} ${skill.color} text-3xl`}></i>
+        <span class="text-sm mt-2">{skill.name}</span>
+      </div>
+    ))}
+  </div>
+</section>
