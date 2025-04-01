@@ -13,7 +13,7 @@ const projects = [
     description:
       "The Tour of heroes Web is a simple web application that allows view a lot of details about heroes from Marvel.",
     image: "/projects/tourofheroes.png",
-    route: "tourofmarvel.netlify.app",
+    route: "https://tourofmarvel.netlify.app",
   },
 ];
 ---
@@ -26,6 +26,7 @@ const projects = [
         <a
           href={project.route}
           target="_blank"
+          rel="noopener noreferrer"
           class="block border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-card-border hover:border-hover-border hover:scale-105 hover:-translate-y-2"
         >
           {project.image && (
