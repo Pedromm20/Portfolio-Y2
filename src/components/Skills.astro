@@ -36,12 +36,12 @@ const skills = {
 ---
 
 
-<section id="skills" class="py-16 px-8">
+<section id="skills" class="section py-16 px-8">
   <h2 class="text-3xl font-bold text-title-color">Skills</h2>
 
   <!-- Programming Languages -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Programming Languages</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6 mt-4">
     {skills.programmingLanguages.map(skill => (
       <div class="flex flex-col items-center transition-transform transform hover:scale-110">
         <i class={`${skill.icon} ${skill.color} text-3xl`}></i>
@@ -52,7 +52,7 @@ const skills = {
 
   <!-- Frameworks -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Frameworks</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6 mt-4">
     {skills.frameworks.map(skill => (
       <div class="flex flex-col items-center transition-transform transform hover:scale-110">
         {skill.icon.includes('.jpg') ? (
@@ -67,7 +67,7 @@ const skills = {
 
   <!-- Development Tools -->
   <h3 class="text-2xl font-semibold mt-6 text-subtitle-color">Development Tools</h3>
-  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-6 mt-4">
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6 mt-4">
     {skills.developmentTools.map(skill => (
       <div class="flex flex-col items-center transition-transform transform hover:scale-110">
         <i class={`${skill.icon} ${skill.color} text-3xl`}></i>

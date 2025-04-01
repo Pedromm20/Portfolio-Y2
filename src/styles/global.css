@@ -53,6 +53,9 @@
   
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-image: var(--background-image);
@@ -67,13 +70,7 @@ header {
 }
 
 /* === Sidebar === */
-.sidebar-link {
-  color: var(--sidebar-link-color);
-}
 
-.sidebar-link.active {
-  color: var(--sidebar-link-active-color);
-}
 
 /* === About Me, Projects, Skills, Contact === */
 #about,
@@ -131,9 +128,33 @@ button:hover {
   color: var(--sidebar-link-hover);
 }
 
+.sidebar-link {
+  color: var(--sidebar-link);
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.sidebar-link:hover {
+  color: var(--sidebar-link-hover);
+  transform: scale(1.1);
+  margin-left: 0.5rem;
+}
+
 .sidebar-link.active {
   color: var(--sidebar-link-active);
+  font-weight: bold;
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
 }
+
+.sidebar-link .indicator {
+  background-color: #2af598; 
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+}
+
+
 
 .bg-button-bg {
   background-color: var(--button-bg);

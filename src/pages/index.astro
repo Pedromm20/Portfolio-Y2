@@ -15,7 +15,9 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="/src/styles/global.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/global.css"/>
+    <script src="/scripts/sidebar.js" defer is:inline></script>
+
 
   </head>
   <body class="flex  bg-fixed bg-cover bg-center text-gray-900 dark:text-gray-300">
@@ -30,8 +32,38 @@ import '../styles/global.css';
       </main>
       <Footer />
     </div>
-    <script src="/scripts/sidebar.js"></script>
+<script>
 
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".section");
+  const links = document.querySelectorAll(".sidebar-link");
+
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let activeSection = null;
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          activeSection = entry.target.id;
+        }
+      });
+
+      if (activeSection) {
+        links.forEach((link) => {
+          const isActive = link.getAttribute("data-section") === activeSection;
+          link.classList.toggle("active", isActive);
+          link.classList.toggle("scale-110", isActive);
+        });
+      }
+    },
+    { root: null, rootMargin: "-40% 0px -40% 0px", threshold: 0.1 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+</script>
   </body>
 </html>
 

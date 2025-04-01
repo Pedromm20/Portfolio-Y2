@@ -1,28 +1,26 @@
----
----
- <!-- Sidebar Name & Title -->
- 
- <aside class="hidden sm:flex fixed left-0 top-0 h-full lg:ml-[10%] flex-col items-start justify-center p-6 text-sidebar-text space-y-6 bg-sidebar-bg">
-  
+<aside class=" section hidden sm:flex fixed left-0 top-0 h-full lg:ml-[10%] flex-col items-start justify-start p-6 text-sidebar-text space-y-8 bg-sidebar-bg shadow-lg  z-10">
 
   <div class="lg:w-1/3 text-left lg:sticky lg:top-16">
-    <h1 class="text-5xl font-bold text-title">Pedro Mula Montesinos</h1>
+    <h1 class="text-5xl font-bold text-title tracking-wide">Pedro Mula Montesinos</h1>
     <p class="text-2xl text-highlight mt-2">Web Developer</p>
-    <p class="text-lg text-description mt-4 max-w-xs">
+    <p class="text-lg text-description mt-4 max-w-xs pb-6">
       I'm a web developer based in Spain. I love creating websites and web applications that are both beautiful and functional.
     </p>
   </div>
 
-  <a href="#about" class="sidebar-link text-3xl flex items-center">
-    <span class="indicator opacity-0 mr-2 transition-opacity">-</span> About
-  </a>
-  <a href="#projects" class="sidebar-link text-3xl flex items-center">
-    <span class="indicator opacity-0 mr-2 transition-opacity">-</span> Projects
-  </a>
-  <a href="#skills" class="sidebar-link text-3xl flex items-center">
-    <span class="indicator opacity-0 mr-2 transition-opacity">-</span> Skills
-  </a>
-  <a href="#contact" class="sidebar-link text-3xl flex items-center">
-    <span class="indicator opacity-0 mr-2 transition-opacity">-</span> Contact
-  </a>
+  <!-- Sidebar Links -->
+  <div class="space-y-6 mt-8">
+    <a href="#about" class="sidebar-link text-3xl flex items-center transition-transform transform hover:scale-105 hover:ml-2 duration-300" data-section="about">
+      <span class="indicator opacity-0 mr-3 transition-opacity rounded-full bg-highlight"></span> About
+    </a>
+    <a href="#projects" class="sidebar-link text-3xl flex items-center transition-transform transform hover:scale-105 hover:ml-2 duration-300" data-section="projects">
+      <span class="indicator opacity-0 mr-3 transition-opacity rounded-full  bg-highlight"></span> Projects
+    </a>
+    <a href="#skills" class="sidebar-link text-3xl flex items-center transition-transform transform hover:scale-105 hover:ml-2 duration-300"data-section="skills">
+      <span class="indicator opacity-0 mr-3 transition-opacity rounded-full bg-highlight"></span> Skills
+    </a>
+    <a href="#contact" class="sidebar-link text-3xl flex items-center transition-transform transform hover:scale-105 hover:ml-2 duration-300"data-section="contact">
+      <span class="indicator opacity-0 mr-3 transition-opacity rounded-full  bg-highlight"></span> Contact
+    </a>
+  </div>
 </aside>
